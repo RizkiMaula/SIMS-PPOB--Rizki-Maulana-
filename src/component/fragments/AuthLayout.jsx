@@ -1,9 +1,9 @@
 import { Link } from 'react-router';
-import Ilustrasi from '../assets/Login.png';
-import Logo from '../assets/Logo.png';
+import Ilustrasi from '../../assets/Login.png';
+import Logo from '../../assets/Logo.png';
 
 // eslint-disable-next-line react/prop-types
-const AuthLayout = ({ title }) => {
+const AuthLayout = ({ title, text, direct, input, action = 'masuk' }) => {
   return (
     <div className="grid min-h-screen grid-cols-1 md:grid-cols-2">
       <div className="flex flex-col items-center justify-center gap-5 px-[4rem]">
@@ -19,27 +19,18 @@ const AuthLayout = ({ title }) => {
           action=""
           className="flex flex-col w-full gap-4 "
         >
-          <input
-            type="email"
-            placeholder="Email"
-            className="p-2 border-2 border-gray-300 rounded-md"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="p-2 border-2 border-gray-300 rounded-md"
-          />
+          {input}
           <button
             type="submit"
             className="p-2 mt-6 text-white bg-red-500 border-2 rounded-md"
           >
-            Masuk
+            {action}
           </button>
         </form>
         <span>
-          belum punya akun? registrasi{' '}
+          {text}{' '}
           <Link
-            to="/register"
+            to={direct}
             className="font-bold text-red-500"
           >
             di sini

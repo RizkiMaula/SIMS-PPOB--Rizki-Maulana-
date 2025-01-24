@@ -1,15 +1,11 @@
-const InputText = () => {
+// eslint-disable-next-line react/prop-types
+const InputText = ({ text, typeInput }) => {
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Email"
-      />
-      <input
-        type="password"
-        placeholder="Password"
-      />
-    </div>
+    <input
+      type={typeInput}
+      placeholder={text}
+      className="p-2 border-2 border-gray-300 rounded-md"
+    />
   );
 };
 

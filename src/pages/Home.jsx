@@ -1,9 +1,7 @@
+import HomeFragment from '../component/fragments/HomeFragment';
+
 const Home = () => {
-  return (
-    <div>
-      <h1>Home</h1>
-    </div>
-  );
+  return <HomeFragment />;
 };
 
 export default Home;

@@ -1,9 +1,7 @@
+import RegisterFragment from '../component/fragments/RegisterFragment';
+
 const Register = () => {
-  return (
-    <div>
-      <h1>Register</h1>
-    </div>
-  );
+  return <RegisterFragment />;
 };
 
 export default Register;
