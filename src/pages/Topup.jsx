@@ -1,9 +1,7 @@
+import TopupFragment from '../component/fragments/TopupFragment';
+
 const Topup = () => {
-  return (
-    <div>
-      <h1>Topup</h1>
-    </div>
-  );
+  return <TopupFragment />;
 };
 
 export default Topup;

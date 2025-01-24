@@ -8,8 +8,8 @@ const TransactionFragment = () => {
       <Navbar />
       <div className="px-[3rem] md:px-[10rem] flex flex-col py-2">
         <ProfileFragment />
-        <div className="flex flex-col">
-          <h1 className="text-2xl font-bold pb-1.5">Semua Transaksi</h1>
+        <div className="flex flex-col mt-6">
+          <h1 className="pb-5 text-xl font-bold">Semua Transaksi</h1>
           <div className="flex flex-col gap-2">
             <HistoryBox
               transaction="Top Up Saldo"
