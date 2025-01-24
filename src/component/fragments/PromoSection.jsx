@@ -4,7 +4,7 @@ const PromoSection = () => {
   return (
     <div>
       <h1>Temukan Promo Menarik</h1>
-      <div className="flex flex-col items-center max-w-screen-xl py-16 mx-auto border-2 border-black md:flex-row md:justify-between">
+      <div className="flex flex-col items-center max-w-screen-xl gap-3 pt-4 pb-16 mx-auto md:flex-row md:justify-between">
         {banner.map((item) => {
           return (
             <div

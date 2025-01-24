@@ -7,6 +7,7 @@ import Register from './pages/Register.jsx';
 import Topup from './pages/Topup.jsx';
 import Home from './pages/Home.jsx';
 import Account from './pages/Account.jsx';
+import Transaction from './pages/Transaction.jsx';
 
 const root = document.getElementById('root');
 
@@ -32,6 +33,10 @@ ReactDOM.createRoot(root).render(
       <Route
         path="/topup"
         element={<Topup />}
+      />
+      <Route
+        path="/transaction"
+        element={<Transaction />}
       />
       <Route
         path="*"

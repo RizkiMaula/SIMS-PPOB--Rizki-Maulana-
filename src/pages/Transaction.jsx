@@ -1,9 +1,7 @@
+import TransactionFragment from '../component/fragments/TransactionFragment';
+
 const Transaction = () => {
-  return (
-    <div>
-      <h1>Transaction</h1>
-    </div>
-  );
+  return <TransactionFragment />;
 };
 
 export default Transaction;

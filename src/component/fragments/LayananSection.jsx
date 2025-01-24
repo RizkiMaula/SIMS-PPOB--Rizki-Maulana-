@@ -2,7 +2,7 @@ import { layanan } from '../../data/layanan';
 
 const LayananSection = () => {
   return (
-    <div className="flex flex-col items-center max-w-screen-xl py-16 mx-auto border-2 border-black md:flex-row md:justify-between">
+    <div className="flex flex-col items-center max-w-screen-xl py-16 mx-auto md:flex-row md:justify-between">
       {layanan.map((item) => {
         return (
           <div
