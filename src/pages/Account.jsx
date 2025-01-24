@@ -1,9 +1,7 @@
+import AccountFragment from '../component/fragments/AccountFragment';
+
 const Account = () => {
-  return (
-    <div>
-      <h1>Account</h1>
-    </div>
-  );
+  return <AccountFragment />;
 };
 
 export default Account;
