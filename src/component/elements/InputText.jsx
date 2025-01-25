@@ -5,7 +5,6 @@ const InputText = ({ text, typeInput, event }) => {
       type={typeInput}
       placeholder={text}
       className="p-2 border-2 border-gray-300 rounded-md"
-      required
       onChange={event}
     />
   );

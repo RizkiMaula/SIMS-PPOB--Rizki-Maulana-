@@ -10,7 +10,6 @@ const TransactionBox = ({ transaction, color = 'text-green-400', amount, date, t
       </div>
       <div className="flex px-2 justify-between gap-2 text-[0.7rem] text-gray-500 w-[10rem]">
         <p>{date}</p>
-        <p>{time}</p>
       </div>
     </div>
   );

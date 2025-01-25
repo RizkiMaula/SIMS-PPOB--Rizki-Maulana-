@@ -6,12 +6,8 @@ import PromoSection from './PromoSection';
 const HomeFragment = () => {
   return (
     <div>
-      <Navbar />
-      <div className="px-[3rem] md:px-[10rem] flex flex-col">
-        <ProfileFragment />
-        <LayananSection />
-        <PromoSection />
-      </div>
+      <LayananSection />
+      <PromoSection />
     </div>
   );
 };
