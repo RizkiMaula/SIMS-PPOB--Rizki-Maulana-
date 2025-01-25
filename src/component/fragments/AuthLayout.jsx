@@ -3,7 +3,7 @@ import Ilustrasi from '../../assets/Login.png';
 import Logo from '../../assets/Logo.png';
 
 // eslint-disable-next-line react/prop-types
-const AuthLayout = ({ title, text, direct, input, action = 'masuk' }) => {
+const AuthLayout = ({ title, text, direct, input, action = 'masuk', event }) => {
   return (
     <div className="grid min-h-screen grid-cols-1 md:grid-cols-2">
       <div className="flex flex-col items-center justify-center gap-5 px-[4rem]">
@@ -20,13 +20,14 @@ const AuthLayout = ({ title, text, direct, input, action = 'masuk' }) => {
           className="flex flex-col w-full gap-4 "
         >
           {input}
-          <button
-            type="submit"
-            className="p-2 mt-6 text-white bg-red-500 border-2 rounded-md"
-          >
-            {action}
-          </button>
         </form>
+        <button
+          type="submit"
+          className="w-full p-2 mt-6 text-white bg-red-500 border-2 rounded-md hover:cursor-pointer"
+          onClick={event}
+        >
+          {action}
+        </button>
         <span>
           {text}{' '}
           <Link
