@@ -131,7 +131,7 @@ const AccountFragment = () => {
               className="p-2 mt-6 text-white bg-red-500 border-2 rounded-md hover-cursor-pointer"
               onClick={() => {
                 localStorage.removeItem('token');
-                navigate('/');
+                navigate('/login');
               }}
             >
               Logout
