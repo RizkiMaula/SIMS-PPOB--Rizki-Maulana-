@@ -44,7 +44,7 @@ const AccountFragment = () => {
         <img
           src={data?.data?.profile_image === null ? profile : data?.data?.profile_image}
           alt="Profile Picture"
-          className="cursor-pointer "
+          className="cursor-pointer w-[6rem] h-[6rem] rounded-full"
           onClick={() => document.getElementById('fileInput').click()}
         />
         <input
@@ -104,7 +104,11 @@ const AccountFragment = () => {
             </button>
             <button
               type="submit"
-              className="p-2 mt-6 text-white bg-red-500 border-2 rounded-md"
+              className="p-2 mt-6 text-white bg-red-500 border-2 rounded-md hover-cursor-pointer"
+              onClick={() => {
+                localStorage.removeItem('token');
+                navigate('/');
+              }}
             >
               Logout
             </button>

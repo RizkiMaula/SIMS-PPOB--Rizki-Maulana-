@@ -8,8 +8,7 @@ const usePostLogin = (endPoint) => {
     axios
       .post(`https://take-home-test-api.nutech-integrasi.com/${endPoint}`, item, {
         headers: {
-          //   apiKey: '24405e01-fbc1-45a5-9f5a-be13afcd757c',
-          //   'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
         },
       })
       .then((response) => response.data)

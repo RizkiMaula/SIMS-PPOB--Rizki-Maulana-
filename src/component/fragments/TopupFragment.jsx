@@ -2,13 +2,21 @@ import Button from '../elements/Button';
 import InputText from '../elements/InputText';
 import Navbar from './navbar';
 import ProfileFragment from './ProfileFragment';
+import useGet from '../../hooks/useGet';
 
 const TopupFragment = () => {
+  const { data } = useGet('balance');
+
+  console.log(data?.data?.balance);
   return (
     <>
       <Navbar />
       <div className="px-[3rem] md:px-[10rem] flex flex-col py-2 gap-10">
-        <ProfileFragment />
+        <ProfileFragment
+          top="top-[7.1rem]"
+          amount={`Rp. ${data?.data?.balance}`}
+          textSize="text-xl"
+        />
         <div>
           <h1 className="">Silahkan Masukan </h1>
           <h1 className="text-2xl font-bold">Nominal Top Up </h1>
@@ -18,6 +26,7 @@ const TopupFragment = () => {
             <InputText
               typeInput={'text'}
               text={'Masukan Nominal Top Up'}
+              deactive={true}
             />
             <Button
               width="w-full"
@@ -34,6 +43,7 @@ const TopupFragment = () => {
               color={'bg-white'}
               border={'border-gray-500'}
               txtColor="text-gray-500"
+              event={() => console.log('test')}
             />
             <Button
               width="w-full"
