@@ -9,8 +9,6 @@ import Home from './pages/Home.jsx';
 import Account from './pages/Account.jsx';
 import Transaction from './pages/Transaction.jsx';
 import Bayar from './pages/Bayar.jsx';
-import ProtectedRoute from './protectedRoute/ProtectedRoute.jsx';
-import Layout1 from './component/layouts/Layout1.jsx';
 
 const root = document.getElementById('root');
 
