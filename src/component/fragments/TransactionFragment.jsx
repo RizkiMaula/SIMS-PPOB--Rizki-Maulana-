@@ -1,4 +1,4 @@
-import Navbar from './navbar';
+import Navbar from './Navbar';
 import ProfileFragment from './ProfileFragment';
 import HistoryBox from '../elements/HistoryBox';
 import useGet from '../../hooks/useGet';

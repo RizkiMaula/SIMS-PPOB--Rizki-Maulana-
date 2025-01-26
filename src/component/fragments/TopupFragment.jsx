@@ -1,6 +1,6 @@
 import Button from '../elements/Button';
 import InputText from '../elements/InputText';
-import Navbar from './navbar';
+import Navbar from './Navbar';
 import ProfileFragment from './ProfileFragment';
 import useGet from '../../hooks/useGet';
 import { useState } from 'react';

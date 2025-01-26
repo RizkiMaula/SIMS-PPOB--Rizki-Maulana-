@@ -1,4 +1,4 @@
-import Navbar from './navbar';
+import Navbar from './Navbar';
 import ProfileFragment from './ProfileFragment';
 import listrik from '../../assets/Listrik.png';
 import InputText from '../elements/InputText';
