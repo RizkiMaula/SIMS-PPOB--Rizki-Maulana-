@@ -1,5 +1,5 @@
 import Navbar from './Navbar';
-import profile from '../../assets/profile.png';
+import profile from '../../assets/Profile.png';
 import InputText from '../elements/InputText';
 import { useSearchParams, useNavigate } from 'react-router';
 import useGet from '../../hooks/useGet';
