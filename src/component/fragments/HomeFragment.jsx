@@ -1,4 +1,4 @@
-import Navbar from '../fragments/navbar';
+import Navbar from '../fragments/Navbar';
 import LayananSection from './LayananSection';
 import ProfileFragment from './ProfileFragment';
 import PromoSection from './PromoSection';
