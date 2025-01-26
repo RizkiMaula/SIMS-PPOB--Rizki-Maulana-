@@ -17,12 +17,10 @@ const root = document.getElementById('root');
 ReactDOM.createRoot(root).render(
   <BrowserRouter>
     <Routes>
-      <Route element={<Layout1 />}>
-        <Route
-          path="/"
-          element={<Home />}
-        />
-      </Route>
+      <Route
+        path="/"
+        element={<Home />}
+      />
 
       <Route
         path="/bayar/:id"
