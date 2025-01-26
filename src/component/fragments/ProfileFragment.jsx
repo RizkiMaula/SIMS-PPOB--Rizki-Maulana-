@@ -1,4 +1,4 @@
-import profile from '../../assets/profile.png';
+import profile from '../../assets/Profile.png';
 import background from '../../assets/Background Saldo.png';
 import useGet from '../../hooks/useGet';
 
