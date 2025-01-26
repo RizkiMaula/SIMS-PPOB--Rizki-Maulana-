@@ -2,12 +2,16 @@ import Navbar from './navbar';
 import ProfileFragment from './ProfileFragment';
 import HistoryBox from '../elements/HistoryBox';
 import useGet from '../../hooks/useGet';
+import usePostLogin from '../../hooks/usePostLogin';
 
 const TransactionFragment = () => {
   const { data, loading, error } = useGet('transaction/history');
   const { data: dataAmout } = useGet('balance');
+  // const { login: topUp } = usePostLogin('topup');
+  const { data: dataServices } = useGet('services');
 
   console.log(dataAmout?.data?.balance);
+  console.log(dataServices);
 
   const formatDate = (dateString) => {
     const date = new Date(dateString);

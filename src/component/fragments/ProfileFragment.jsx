@@ -35,6 +35,7 @@ const ProfileFragment = ({ right = 'right-[29.6rem]', left = 'left-[45.4rem]', t
           src={profileImage()}
           alt="profile"
           className="w-[6rem] h-[6rem] rounded-full"
+          onError={(e) => (e.target.src = profile)}
         />
         <h1>Selamat Datang, </h1>
         <h1 className="text-3xl font-bold">{`${firstName()} ${lastName()} `}</h1>

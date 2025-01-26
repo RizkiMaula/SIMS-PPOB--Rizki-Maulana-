@@ -4,6 +4,7 @@ import InputText from '../elements/InputText';
 import { useSearchParams, useNavigate } from 'react-router';
 import useGet from '../../hooks/useGet';
 import { useEffect, useState } from 'react';
+import usePut from '../../hooks/usePut';
 
 const AccountFragment = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +12,8 @@ const AccountFragment = () => {
     first_name: '',
     last_name: '',
   });
-  const { data } = useGet('profile');
+  const { data, reFetch } = useGet('profile');
+  const { update } = usePut('update');
   let [searchParams] = useSearchParams();
 
   const editable = searchParams.get('edit') === 'true';
@@ -37,6 +39,27 @@ const AccountFragment = () => {
     setFormData((prev) => ({ ...prev, last_name: e.target.value }));
   };
 
+  const handleUpdate = async () => {
+    try {
+      const updatedData = { email: formData.email, first_name: formData.first_name, last_name: formData.last_name };
+      const response = await update(updatedData);
+      alert('Profile updated successfully');
+      reFetch();
+      navigate('/akun');
+      console.log(response);
+    } catch (error) {
+      if (error.response) {
+        console.log(error.response.data); // API response body
+        console.log(error.response.status); // HTTP status code
+        console.log(error.response.headers); // Response headers
+      } else if (error.request) {
+        console.log(error.request); // No response from server
+      } else {
+        console.log('Error:', error.message); // Other errors
+      }
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -46,6 +69,7 @@ const AccountFragment = () => {
           alt="Profile Picture"
           className="cursor-pointer w-[6rem] h-[6rem] rounded-full"
           onClick={() => document.getElementById('fileInput').click()}
+          onError={(e) => (e.target.src = profile)}
         />
         <input
           type="file"
@@ -66,7 +90,7 @@ const AccountFragment = () => {
               className="w-full"
               value={formData.email}
               event={handleEmail}
-              disabled={!editable}
+              deactive={!editable}
             />
           </span>
           <span className="flex flex-col gap-1">
@@ -75,8 +99,8 @@ const AccountFragment = () => {
               typeInput={'text'}
               className="w-full"
               value={formData.first_name}
-              event={handleEmail}
-              disabled={!editable}
+              event={handleFirst}
+              deactive={!editable}
             />
           </span>
           <span className="flex flex-col gap-1">
@@ -85,8 +109,8 @@ const AccountFragment = () => {
               typeInput={'text'}
               className="w-full"
               value={formData.last_name}
-              event={handleEmail}
-              disabled={!editable}
+              event={handleLast}
+              deactive={!editable}
             />
           </span>
         </form>
@@ -118,6 +142,7 @@ const AccountFragment = () => {
           <button
             type="submit"
             className="p-2 mt-6 text-white bg-red-500 border-2 rounded-md w-[50%]"
+            onClick={handleUpdate}
           >
             Update
           </button>

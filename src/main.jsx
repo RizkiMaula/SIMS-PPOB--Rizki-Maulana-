@@ -25,7 +25,7 @@ ReactDOM.createRoot(root).render(
       </Route>
 
       <Route
-        path="/bayar"
+        path="/bayar/:id"
         element={<Bayar />}
       />
       <Route

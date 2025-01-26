@@ -3,8 +3,10 @@ import ProfileFragment from './ProfileFragment';
 import listrik from '../../assets/Listrik.png';
 import InputText from '../elements/InputText';
 import Button from '../elements/Button';
+import { useParams } from 'react-router';
 
 const BayarFragment = () => {
+  const { id } = useParams();
   return (
     <>
       <Navbar />
